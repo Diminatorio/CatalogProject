@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="icon" href="/media/favicon.png" type="image/x-icons">
+    <script src="{% static 'js/ckeditor/ckeditor.js' %}"></script>
+</head>
+<body>
+    <div class="full-container">
+        {% include "common/header_bar.html" %}
+        <div class="main"><main>{% block container %}{% endblock %}</main></div>
+{#        {% include "common/footer.html" %}#}
+    </div>
+    {% block body_scripts %}{% endblock %}
+    <script>
+        document.querySelector("#search-button").addEventListener("click", (ev) => {
+            ev.preventDefault()
+            const query = document.querySelector('#query')
+            const queryText = query.value
+            if (queryText) {
+                window.location.replace(`http://127.0.0.1:8000/search?query=${queryText}`);
+            } else{
+                query.classList.add('wrong')
+                setTimeout(() => {query.classList.remove('wrong')},500)
+            }
+
+        });
+    </script>
+</body>
+</html>
+

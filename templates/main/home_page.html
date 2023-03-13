@@ -1,0 +1,21 @@
+{% extends 'common/index.html' %}
+{% load static %}
+
+{% block title %}Список категорій | NeiroMebel{% endblock %}
+
+{% block container %}
+    {% include 'common/aside.html' %}
+    <div class="content-main">
+        <h2>Категорії</h2>
+        <div class="object-list">
+            {% for obj in object_list %}
+                <a href="{% url 'category' obj.id %}" class="category-obj">
+                    <img src="{{ obj.photo.url }}" alt="Фото">
+                    <div class="see">{{ obj.category_name }}</div>
+                </a>
+            {% empty %}
+                <h3>Немає категорій</h3>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

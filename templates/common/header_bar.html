@@ -1,0 +1,28 @@
+{% load static %}
+
+<header>
+    <div class="header">
+        <div class="header__first-line">
+            <div class="header__name">
+                <a href="{% url "home" %}"><img src="{{ MEDIA_URL }}main-icon.png" width="217px" height="110px" alt="Фото"></a>
+                <h1>NeiroMebel</h1>
+            </div>
+            <div class="header__network">
+                <div class="header__social">
+                    <a href="https://www.tiktok.com/@neiromebel?_t=8abjKmjJGT8&_r=1" target="_blank" >
+                        <img src='{{ MEDIA_URL }}tiktok.png' alt="insta">
+                    </a>
+                    <a href="https://instagram.com/neiromebel?igshid=ZDdkNTZiNTM=" target="_blank" >
+                        <img src='{{ MEDIA_URL }}insta.png' alt="insta">
+                    </a>
+                </div>
+                <div class="header__phone"><p>+380504578824</p></div>
+                <div class="header__phone"><p>neiromebel@gmail.com</p></div>
+            </div>
+        </div>
+        <form class="header__second_line">
+            <input class ='input' required="required" type="text" placeholder="Введіть ім'я товару" name="query" autocomplete="off" id="query">
+            <button id="search-button"><img src="{{ MEDIA_URL }}loop.png" alt="лупа"></button>
+        </form>
+    </div>
+</header>

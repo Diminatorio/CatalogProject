@@ -1,0 +1,21 @@
+{% extends 'common/index.html' %}
+{% load static %}
+
+{% block title %}Категорія: {{ category_name }} | !!!НАЗВАНИЕ САЙТА!!!{% endblock %}
+
+{% block container %}
+    {% include 'common/aside.html' %}
+    <div class="content-main">
+        <h2>{{ category_name }}</h2>
+        <div class="object-list">
+            {% for subcategory in subcategory_list %}
+                <a href="{% url 'subcategory' subcategory.id %}" class="category-obj">
+                    <img src="{{ subcategory.photo.url }}" alt="Фото">
+                    <div class="see">{{ subcategory.subcategory_name }}</div>
+                </a>
+            {% empty %}
+                <h3>В цій категорії немає підкатегорій</h3>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

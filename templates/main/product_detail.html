@@ -1,0 +1,33 @@
+{% extends 'common/index.html' %}
+{% load static %}
+
+{% block title %}Товар: {{ product_name }} | NeiroMebel{% endblock %}
+
+{% block container %}
+    {% include 'common/aside.html' %}
+    <div class="content-main">
+        <h1>{{ product.product_name }}</h1>
+        <div class="object-detail">
+            <div class="photos">
+                <div class="thumbnails">
+                    <img src="{{ product.main_photo.url }}" alt="Фото" class="thumbnail active">
+                    {% for photo in photos %}
+                        <img src="{{ photo.image.url }}" alt="Фото" class="thumbnail">
+                    {% endfor %}
+                </div>
+                <img src="{{ product.main_photo.url }}" alt="Фото" class="main-photo">
+            </div>
+            <div class="short-description">
+                <div class="detail-price"><strong>{{ product.price }}грн</strong></div>
+                <div class="detail-code">Код: {{ product.code }}</div>
+                <div class="detail-phone">Номер: +88055535335</div>
+            </div>
+        </div>
+        <div class="description">
+            <h1 style="align-self: center; font-size:3rem;">Опис</h1>
+            {{ product.description|safe }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block body_scripts %}<script src="{% static  'js/images.js' %}"></script>{% endblock %}

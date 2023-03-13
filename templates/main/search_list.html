@@ -1,0 +1,81 @@
+{% extends 'common/index.html' %}
+{% load static %}
+
+{% block title %}Результат пошуку: {{ search_result }} | NeiroMebel{% endblock %}
+
+{% block container %}
+    {% include 'common/aside.html' %}
+    <div class="content-main">
+        <h2>Результати пошуку: {{ search_result }}</h2>
+        {% if object_list|length %}
+            <div class="sort-div">
+                <h3>Сортування:</h3>
+
+                <select name="sort" id="sorting" class="sort-select">
+                    <option value="">По ревелантності</option>
+                    <option value="price" {% if request.GET.sort == 'price' %}selected{% endif %}>На збільшення ціни
+                    </option>
+                    <option value="-price" {% if request.GET.sort == '-price' %}selected{% endif %}>На зменшення ціни
+                    </option>
+                </select>
+
+            </div>
+        {% endif %}
+        <div class="object-list">
+            {% for product in object_list %}
+                <div class="product-obj">
+                    <a class="img" href="{% url 'product' product.id %}">
+                        <img src="{{ product.main_photo.url }}" alt="Фото">
+                    </a>
+                    <div class="see-product">{{ product.product_name }}</div>
+                    <h3 class="code">Код: {{ product.code }}</h3>
+                    <div class="product-price"><strong>{{ product.price }}грн</strong></div>
+                    <a href="{% url 'product' product.id %}" class="goto-detail">Заказати</a>
+                </div>
+            {% empty %}
+                <h3>Результатів пошуку немає</h3>
+            {% endfor %}
+        </div>
+        {% if is_paginated %}
+            <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}&query={{ request.GET.query }}">&laquo; First</a>
+                <a href="?page=
+                        {{ page_obj.previous_page_number }}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}&query={{ request.GET.query }}">previous</a>
+            {% endif %}
+
+            <span class="current-page">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page=
+                        {{ page_obj.next_page_number }}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}&query={{ request.GET.query }}">next</a>
+                <a href="?page=
+                        {{ page_obj.paginator.num_pages }}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}&query={{ request.GET.query }}">last &raquo;</a>
+            {% endif %}
+        </span>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block body_scripts %}
+    <script>
+        const select = document.querySelector('#sorting');
+
+        select.addEventListener('change', (event) => {
+            const currentUrl = new URL(window.location.href);
+            const currentSearch = currentUrl.search;
+            const selectedValue = event.target.value;
+
+            // Обновляем значение параметра 'sort' в текущем search-запросе
+            const searchParams = new URLSearchParams(currentSearch);
+            searchParams.set('sort', selectedValue);
+
+            // Перенаправляем на новый URL-адрес с обновленными параметрами
+            window.location.href = `${currentUrl.origin}${currentUrl.pathname}?${searchParams.toString()}`;
+        });
+    </script>
+{% endblock %}
