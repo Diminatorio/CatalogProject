@@ -1,0 +1,26 @@
+[
+  {
+    "model": "product.productphotomodel",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "image": "product/kuhnya_5wEdB2F.jpg"
+    }
+  },
+  {
+    "model": "product.productphotomodel",
+    "pk": 2,
+    "fields": {
+      "product": 1,
+      "image": "product/kuhnya_jdta2Cu.jpg"
+    }
+  },
+  {
+    "model": "product.productphotomodel",
+    "pk": 3,
+    "fields": {
+      "product": 2,
+      "image": "product/kuhnya_jdta2aaCu.jpg"
+    }
+  }
+]
