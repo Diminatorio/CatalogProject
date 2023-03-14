@@ -17,7 +17,7 @@ class SubcategoryModel(models.Model):
 class ProductModel(models.Model):
     subcategory_id = models.ForeignKey('SubcategoryModel', verbose_name="CATEGORY_ID", on_delete=models.DO_NOTHING)
     main_photo = models.ImageField(upload_to='product/', null=True)
-    product_name = models.CharField(max_length=80)
+    product_name = models.CharField(max_length=81)
     price = models.PositiveIntegerField()
     description = RichTextField(null=True, blank=True)
     code = models.CharField(max_length=50, default='SHK')
