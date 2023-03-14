@@ -1,0 +1,206 @@
+[
+  {
+    "model": "product.productmodel",
+    "pk": 1,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_35yZG7c.png",
+      "product_name": "asd",
+      "price": 111111,
+      "description": "<h1><strong>asdasdAAAA</strong></h1>\r\n\r\n<p><strong>ASDasdsad</strong></p>\r\n\r\n<p><strong>asdasdasd</strong></p>\r\n\r\n<p><strong><cite>asdasd</cite></strong></p>\r\n\r\n<p><strong><cite><img alt=\"asd\" src=\"/media/product/shcaf.png\" style=\"border-style:solid; border-width:0px; height:100px; width:100px\" /></cite></strong></p>",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 2,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_LLNRoR7.png",
+      "product_name": "asdasdasd",
+      "price": 1111,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 3,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_pWdNBE6.png",
+      "product_name": "aaaaa",
+      "price": 123123,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 4,
+    "fields": {
+      "subcategory_id": 2,
+      "main_photo": "product/shcaf_4USxGp6.png",
+      "product_name": "asdasdaaaa",
+      "price": 111,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 5,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasd",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 6,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdd",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 6,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdv",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 7,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasds",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 8,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdg",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 9,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdj",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 10,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdl",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 11,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdk",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 12,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdf",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 13,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdc",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 14,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdh",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 15,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdbb",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  },
+  {
+    "model": "product.productmodel",
+    "pk": 16,
+    "fields": {
+      "subcategory_id": 1,
+      "main_photo": "product/shcaf_XVjVB60.png",
+      "product_name": "asdasdm",
+      "price": 101,
+      "description": "",
+      "code": "SHK"
+    }
+  }
+]
