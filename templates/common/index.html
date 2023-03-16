@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="icon" href="/media/favicon.png" type="image/x-icons">
@@ -12,7 +13,6 @@
     <div class="full-container">
         {% include "common/header_bar.html" %}
         <div class="main"><main>{% block container %}{% endblock %}</main></div>
-{#        {% include "common/footer.html" %}#}
     </div>
     {% block body_scripts %}{% endblock %}
     <script>

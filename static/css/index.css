@@ -255,7 +255,8 @@ aside div h4 {
 .object-detail {
     display:flex;
     background-color: var(--light-color);
-    padding: 20px;
+    padding: 10px;
+    margin: 20px;
     border-radius: 3px;
 }
 
@@ -392,6 +393,12 @@ aside div h4 {
     font-size: 1.1rem
 }
 
+@media (max-width: 1200px) {
+    .object-detail {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 768px) {
     .header__first-line {
         flex-direction: column;
@@ -436,6 +443,7 @@ aside div h4 {
     .object-detail {
         flex-direction: column;
         padding:0;
+        margin: 0;
 
     }
     .category-obj {
