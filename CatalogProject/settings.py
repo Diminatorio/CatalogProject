@@ -20,6 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = False
 
+ALLOWED_HOSTS = ['164.90.179.174']
+
 # Application definition
 
 INSTALLED_APPS = [
