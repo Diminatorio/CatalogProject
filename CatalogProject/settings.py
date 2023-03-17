@@ -18,9 +18,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['10.114.0.2']
+ALLOWED_HOSTS = ['164.90.179.174']
 
 # Application definition
 
