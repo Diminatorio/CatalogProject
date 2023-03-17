@@ -22,6 +22,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['164.90.179.174']
 
+SECRET_KEY = 'django-insecure-c5)rc)476(0(h8zvy&(gujb)llm@wce_g0n*iru4h$erm#0v*5'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -122,9 +124,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
-try:
-    from .local_settings import *
-except ImportError:
-    from .prod_settings import *
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
