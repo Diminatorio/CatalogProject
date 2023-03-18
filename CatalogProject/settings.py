@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'ckeditor',
-    'static_autocollect',
 
     'product'
 ]
