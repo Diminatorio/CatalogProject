@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-from django.http import Http404
+from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 
 from product.models import CategoryModel, SubcategoryModel, ProductModel, ProductPhotoModel
@@ -80,3 +80,7 @@ class ProductResultsView(ListView):
         context = super().get_context_data(**kwargs)
         context['search_result'] = query
         return context
+
+
+def https404(request, exception):
+    return render(request, '404.html', {})
