@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="icon" href="{{ MEDIA_URL }}favicon.png" type="image/x-icons">
+    <link rel="icon" href="/media/favicon.ico" type="image/x-icons">
     <script src="{% static 'js/ckeditor/ckeditor.js' %}"></script>
 </head>
 <body>
@@ -21,7 +21,7 @@
             const query = document.querySelector('#query')
             const queryText = query.value
             if (queryText) {
-                window.location.replace(`http://127.0.0.1:8000/search?query=${queryText}`);
+                window.location.replace(`http://164.90.179.174/search?query=${queryText}`);
             } else{
                 query.classList.add('wrong')
                 setTimeout(() => {query.classList.remove('wrong')},500)
