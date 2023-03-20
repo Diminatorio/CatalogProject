@@ -18,9 +18,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['164.90.179.174', 'localhost']
+ALLOWED_HOSTS = ['164.90.179.174', 'neiromebel.com']
 
 SECRET_KEY = 'django-insecure-c5)rc)476(0(h8zvy&(gujb)llm@wce_g0n*iru4h$erm#0v*5'
 
